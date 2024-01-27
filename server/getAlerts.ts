@@ -2,7 +2,11 @@ import axios from 'axios';
 
 import * as fs from "fs"
 import { config } from "dotenv"
-
+import { z } from "zod"
+const dateStringSchema = z.string().refine((value) => {
+    const regex = /^\d{1,2}-\d{1,2}-\d{4}$/;
+    return regex.test(value);
+}, "Invalid date format, expected dd-mm-yyyy");
 config()
 
 const CONFIG = {
