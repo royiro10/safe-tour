@@ -13,7 +13,7 @@ import { Feature } from "ol";
 import { Point, Polygon } from "ol/geom";
 import { fromLonLat } from "ol/proj";
 
-import data from "./data.json";
+import data from "./assets/data-with-coords.json";
 
 import { getPointFeatures, getPolygonFeatures } from "./utils";
 import { FeatureLike } from "ol/Feature";
